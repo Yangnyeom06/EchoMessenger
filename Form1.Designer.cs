@@ -59,6 +59,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(573, 41);
             textBox1.TabIndex = 2;
+            textBox1.KeyDown += textBox1_KeyDown;
             // 
             // button1
             // 
@@ -69,7 +70,6 @@
             button1.TabIndex = 3;
             button1.Text = "전송";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // Form1
             // 

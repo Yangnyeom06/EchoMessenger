@@ -9,8 +9,22 @@ namespace EchoMesseger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(textBox1.Text);
-            textBox1.Clear();
+            if (!string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                listBox1.Items.Add(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+            }
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                listBox1.Items.Add(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+            }
         }
     }
 }
